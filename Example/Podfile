@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'NMDevice_Example' do
+  pod 'NMDevice', :path => '../'
+
+  target 'NMDevice_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

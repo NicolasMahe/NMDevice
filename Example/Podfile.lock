@@ -1,0 +1,16 @@
+PODS:
+  - NMDevice (0.1.0)
+
+DEPENDENCIES:
+  - NMDevice (from `../`)
+
+EXTERNAL SOURCES:
+  NMDevice:
+    :path: ../
+
+SPEC CHECKSUMS:
+  NMDevice: b7ae020736e9195721f40b22b721eb3ee717bae7
+
+PODFILE CHECKSUM: 5b55d5bebc153fa3697d9d3c8bcb24d8c214ab22
+
+COCOAPODS: 1.1.1
