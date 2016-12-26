@@ -26,6 +26,8 @@ public class Device {
   public static let isIphone47inch: Bool = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.max_length == 667.0
   public static let isIphone55inch: Bool = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.max_length == 736.0
   
+  public static var scale: CGFloat = UIScreen.main.scale
+  
   //screen size
   public class ScreenSize {
     public static let width = UIScreen.main.bounds.size.width
