@@ -16,7 +16,7 @@ public class NMDevice {
     case _47Inch
     case _55Inch
     
-    init() {
+    public init() {
       if UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.max_length == 480.0 {
         self = ._35Inch
       }
@@ -33,29 +33,29 @@ public class NMDevice {
     }
   }
   
-  public enum iOSVersion: Int { //@todo: version que l'init marche bien avec sous version d'ios (v10.2 par exemple)
+  public enum iOSVersion: Int {
     case _7 = 7
     case _8 = 8
     case _9 = 9
     case _10 = 10
     
-    init() {
-      let version = NSString(string: UIDevice.current.systemVersion).doubleValue
-      if version <= 7 {
+    public init() {
+      if iOSVersionDouble < 8 {
         self = ._7
       }
-      else if version == 8 {
+      else if iOSVersionDouble < 9 {
         self = ._8
       }
-      else if version == 9 {
+      else if iOSVersionDouble < 10 {
         self = ._9
       }
-      else {
+      else {//if version < 11 {
         self = ._10
       }
     }
   }
   
+  public static let iOSVersionDouble = NSString(string: UIDevice.current.systemVersion).doubleValue
   public static let name = UIDevice.current.name
   public static let systemName = UIDevice.current.systemName
   public static var scale: CGFloat = UIScreen.main.scale
