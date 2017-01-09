@@ -33,6 +33,10 @@ public class NMDevice {
     }
   }
   
+  public class func isIphoneSize(_ iphoneSize: IphoneSize) -> Bool {
+    return IphoneSize() == iphoneSize
+  }
+  
   public enum iOSVersion: Int {
     case _7 = 7
     case _8 = 8
