@@ -8,6 +8,7 @@
 
 import UIKit
 
+//@todo: use as UIDevice replacement https://github.com/dennisweissmann/DeviceKit
 public class NMDevice {
   
   public enum IphoneSize {
@@ -61,8 +62,14 @@ public class NMDevice {
   
   public static let iOSVersionDouble = NSString(string: UIDevice.current.systemVersion).doubleValue
   public static let name = UIDevice.current.name
+  public static let model = UIDevice.current.model
   public static let systemName = UIDevice.current.systemName
   public static var scale: CGFloat = UIScreen.main.scale
+  public static var UUID: String {
+    guard let identifier = UIDevice.current.identifierForVendor
+      else { return "" }
+    return identifier.uuidString
+  }
   
   //screen size
   public class ScreenSize {
