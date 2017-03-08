@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NMDevice'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'Get info about the device'
   s.description      = <<-DESC
 Get info about the device like system name, version, screen size, etc..
@@ -13,5 +13,5 @@ Get info about the device like system name, version, screen size, etc..
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'NMDevice//**/*.swift'
+  s.source_files = 'NMDevice/**/*.swift'
 end
